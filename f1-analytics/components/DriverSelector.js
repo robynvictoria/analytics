@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const DriverSelector = ({ setDriver, driver, race }) => {
+const DriverSelector = ({ setDriver, race, setLapInfo }) => {
   const [drivers, setDrivers] = useState(null);
   useEffect(() => {
     fetch(`http://ergast.com/api/f1/2022/${race}/drivers.json`)

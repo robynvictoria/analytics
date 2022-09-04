@@ -30,24 +30,25 @@ const Race = ({ race }) => {
         .then((res) => res.json())
         .then((data) => {
           setRaceData(data);
+          console.log(raceData);
           console.log(data);
-          if (raceData) {
-            const lapTimesArr = [];
-
-            raceData.MRData.RaceTable.Races[0].Laps.map((lap) =>
-              lap.Timings.map((time) =>
-                lapTimesArr.push(convertToSeconds(time.time))
-              )
-            );
-            setLapTimes(lapTimesArr);
-
-            setLaps(
-              raceData.MRData.RaceTable.Races[0].Laps.map((lap) => lap.number)
-            );
+          if (raceData && raceData.MRData.RaceTable.Races[0].Laps) {
+            setLapInfo();
           }
         });
     }
   }, [driver]);
+
+  const setLapInfo = () => {
+    const lapTimesArr = [];
+
+    raceData.MRData.RaceTable.Races[0].Laps.map((lap) =>
+      lap.Timings.map((time) => lapTimesArr.push(convertToSeconds(time.time)))
+    );
+    setLapTimes(lapTimesArr);
+
+    setLaps(raceData.MRData.RaceTable.Races[0].Laps.map((lap) => lap.number));
+  };
 
   return (
     <div>
