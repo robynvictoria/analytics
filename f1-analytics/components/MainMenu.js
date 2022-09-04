@@ -4,15 +4,13 @@ import { Dialog, Transition } from "@headlessui/react";
 import {
   HomeIcon,
   UsersIcon,
-  ChartBarIcon,
   XIcon,
   MenuIcon,
   FlagIcon,
 } from "@heroicons/react/outline";
 
 const navigation = [
-  { name: "Dashboard", href: "/", icon: HomeIcon, current: true },
-  { name: "Races", href: "/races", icon: ChartBarIcon, current: false },
+  { name: "Races", href: "/", icon: HomeIcon, current: true },
   { name: "Drivers", href: "/drivers", icon: UsersIcon, current: false },
 ];
 

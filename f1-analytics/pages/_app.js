@@ -2,7 +2,7 @@ import Head from "next/head";
 import Layout from "../components/Layout";
 import "../styles/globals.css";
 
-const App = ({ Component }) => {
+const App = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
@@ -13,7 +13,7 @@ const App = ({ Component }) => {
         />
       </Head>
       <Layout>
-        <Component />
+        <Component {...pageProps} />
       </Layout>
     </>
   );
