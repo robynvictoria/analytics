@@ -22,6 +22,32 @@ const LineChart = ({ xAxisData, yAxisData, driver }) => {
         text: `Lap Times for ${driver}`,
       },
     },
+    scales: {
+      yAxes: {
+        title: {
+          display: true,
+          text: "Lap Time (seconds)",
+          font: {
+            size: 15,
+          },
+        },
+        ticks: {
+          precision: 0,
+        },
+      },
+      xAxes: {
+        title: {
+          display: true,
+          text: "Lap Number",
+          font: {
+            size: 15,
+          },
+        },
+        ticks: {
+          precision: 0,
+        },
+      },
+    },
   };
 
   return (

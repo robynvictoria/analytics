@@ -11,7 +11,7 @@ import {
 
 const navigation = [
   { name: "Races", href: "/", icon: HomeIcon, current: true },
-  { name: "Drivers", href: "/drivers", icon: UsersIcon, current: false },
+  // { name: "Drivers", href: "/drivers", icon: UsersIcon, current: false },
 ];
 
 function classNames(...classes) {
